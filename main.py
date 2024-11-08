@@ -8,7 +8,7 @@ from groq import Groq
 client = Groq(api_key="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")
 
 # Streamlit app configuration
-st.set_page_config(page_title="Diabetic Report Analyzer", layout="wide")
+st.set_page_config(page_title="Med Lingo", layout="wide")
 
 # Sidebar for file upload and instructions
 st.sidebar.title("Upload Your PDF Report")
@@ -21,7 +21,7 @@ st.sidebar.markdown("""
 """)
 
 # Main title and description
-st.title("Custom Blood Test Report Analyzer 🩺")
+st.title("Med Lingo🩺")
 st.markdown("""
 This tool helps you search your blood test report by analyzing custom Boolean expressions.
 Enter your query using `AND`, `OR`, `NOT` to find specific information within your report.
@@ -54,7 +54,7 @@ if uploaded_file and boolean_query:
 
     # Display the custom Boolean query
     with query_display_container:
-        st.subheader("Custom Boolean Query")
+        st.subheader("AI Generated Boolean Query")
         st.code(boolean_query, language="text")
 
     # Send extracted text to Groq for processing
